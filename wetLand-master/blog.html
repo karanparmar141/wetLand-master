@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WetLend-Blog</title>
+    <link rel="shortcut icon" href="img/f-logo.png" type="image/x-icon">
+
+    <style>
+        @import url(css/all.min.css);
+    </style>
+    <link rel="stylesheet" href="fonts/fonts.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<style>
+    body {
+        font-family: 'Open Sans';
+    }
+</style>
+<script>
+    tailwind.config = {
+        theme: {
+            extend: {
+                colors: {
+                    'primary': '#070337',
+                    'secondary': '#57556a',
+                },
+
+            }
+        }
+    }
+</script>
+
+<body>
+    <!-- header  -->
+    <header class="bg-white">
+        <nav class="flex justify-between items-center w-[92%] mx-auto py-3">
+            <div class="logo">
+                <img class="w-40" src="img/logo.png" alt="">
+            </div>
+            <nav class="nav-links duration-500 md:static absolute bg-white md:min-h-fit min-h-[60vh] left-0 top-[-110%] md:w-auto w-full flex items-center px-5">
+                <ul class="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-8 text-primary font-semibold">
+                    <li>
+                        <a class="hover:text-[#6c63ff]" href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a class="hover:text-[#6c63ff]" href="about.html">About</a>
+                    </li>
+                    <li>
+                        <a class="hover:text-[#6c63ff]" href="service.html">Service</a>
+                    </li>
+                    <li>
+                        <a class="hover:text-[#6c63ff] text-[#6c63ff]" href="blog.html">Blog</a>
+                    </li>
+                    <li>
+                        <a class="hover:text-[#6c63ff]" href="pages.html">Pages</a>
+                    </li>
+                    <li>
+                        <a class="hover:text-[#6c63ff]" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="flex items-center gap-6">
+                <a href="#"
+                    class=" px-5 py-2 text-primary font-semibold hover:text-[#6c63ff] invisible md:visible">Login</a>
+                <button
+                    class="bg-[#6c63ff] text-white px-7 py-2 rounded-md font-semibold hover:bg-transparent hover:text-[#6c63ff] border-2 border-[#6c63ff] transition  delay-150">Sign</button>
+                <i class="fa-solid fa-bars text-2xl cursor-pointer md:hidden" onclick="onToggleMenu(this)"
+                    name="menu"></i>
+            </div>
+        </nav>
+    </header>
+
+    <!-- banner -->
+    <section class="bg-[url('/img/page-title.jpg')] py-36 relative">
+        <div class="dummy">
+            <img src="img/dot-2.png" class="left-[0] top-[21%] absolute animate-bounce" alt="">
+            <img src="img/dot-4.png" class="left-[32%] bottom-[10%]  absolute animate-ping" alt="">
+            <img src="img/triangle-2.png" class="right-[19%] top-[20%] absolute animate-spin" alt="">
+            <img src="img/dot-3.png" class="right-[9%] top-[6%] absolute animate-ping" alt="">
+            <img src="img/plus.png" class="right-[0] bottom-[-17%]  absolute" alt="">
+            <img src="img/triangle-1.png" class="left-[19%] top-[32%] animate-spin absolute  " alt="">
+        </div>
+        <div class="container">
+            <div class="text-center">
+                <h3 class="text-6xl text-white font-black mb-2">Blog</h3>
+                <a href="index.html" class="text-primary font-semibold fs-4">Home</a>
+                <a href="#" class="text-white">/ Blog</span>
+            </div>
+        </div>
+    </section>
+    <!--blog deatil section  -->
+    <section class="bg-white">
+        <div class="container mx-auto flex px-5 py-24 items-center justify-center flex-col">
+            <img class="lg:w-4/6 md:w-3/6 w-5/6 drop-shadow-xl mb-5   rounded-xl" alt="hero" src="img/blog-big-1.jpg">
+            <div class="dummy">
+                <span
+                    class="text-gray-500 mr-3 inline-flex items-center ml-auto leading-none text-sm pr-3 hover:text-blue-400 ">
+                    <i class="fa-solid fa-check"></i> Wetland
+                </span>
+                <span
+                    class="text-gray-500 mr-3 inline-flex items-center ml-auto leading-none text-sm pr-3 hover:text-blue-400 ">
+                    <i class="fa-solid fa-check"></i> Branding
+                </span>
+                <span class="text-gray-500 inline-flex items-center leading-none text-sm hover:text-blue-400">
+                    <i class="fa-solid fa-check"></i> No Comments
+                </span>
+            </div>
+            <div class="  lg:w-2/3 w-full">
+                <h1 class="  sm:text-4xl text-3xl mb-4 mt-10 font-extrabold text-primary text-center hover:text-blue-400 transition-all duration-300">We craft marketing
+                    & digital products that grow businesses.</h1>
+                <p class="text-secondary mb-8">Nancy boy Charles down the pub get stuffed mate easy peasy brown bread
+                    car boot squiffy loo, blimey arse over tit it’s your round cup of char horse play chimney pot old.
+                    Chip shop bonnet barney owt to do with me what a plonker hotpot loo that gormless off his nut a
+                    blinding shot Harry […]</p>
+                <div class="text-center">
+                    <button
+                        class="inline-flex text-white bg-blue-500 border-0 py-2 px-6 focus:outline-none hover:bg-white hover:text-[#0d6efd] transition-all duration-500 rounded-lg text-lg">Read
+                        More</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--blog deatil section  -->
+    <section class="bg-white">
+        <div class="container mx-auto flex px-5   items-center justify-center flex-col">
+            <img class="lg:w-4/6 md:w-3/6 w-5/6 drop-shadow-xl mb-5   rounded-xl" alt="hero" src="img/blog-big-2.jpg">
+            <div class="dummy">
+                <span
+                    class="text-gray-500 mr-3 inline-flex items-center ml-auto leading-none text-sm pr-3 hover:text-blue-400 ">
+                    <i class="fa-solid fa-check"></i> Wetland
+                </span>
+                <span
+                    class="text-gray-500 mr-3 inline-flex items-center ml-auto leading-none text-sm pr-3 hover:text-blue-400 ">
+                    <i class="fa-solid fa-check"></i> Branding
+                </span>
+                <span class="text-gray-500 inline-flex items-center leading-none text-sm hover:text-blue-400">
+                    <i class="fa-solid fa-check"></i> No Comments
+                </span>
+            </div>
+            <div class="  lg:w-2/3 w-full">
+                <h1 class="  sm:text-4xl text-3xl mb-4 mt-10 font-extrabold text-primary text-center hover:text-blue-400 transition-all duration-300">TikTok Influencer Marketing: How to Work With Influencers</h1>
+                <p class="text-secondary mb-8">Nancy boy Charles down the pub get stuffed mate easy peasy brown bread
+                    car boot squiffy loo, blimey arse over tit it’s your round cup of char horse play chimney pot old.
+                    Chip shop bonnet barney owt to do with me what a plonker hotpot loo that gormless off his nut a
+                    blinding shot Harry […]</p>
+                <div class="text-center">
+                    <button
+                        class="inline-flex text-white bg-blue-500 border-0 py-2 px-6 focus:outline-none hover:bg-white hover:text-[#0d6efd] transition-all duration-500 rounded-lg text-lg">Read
+                        More</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- 4 section -->
+    <section class="bg-white">
+        <div class="container mx-auto flex px-5 py-24 items-center justify-center flex-col">
+            <img class="lg:w-4/6 md:w-3/6 w-5/6 drop-shadow-xl mb-5   rounded-xl" alt="hero" src="img/b2.jpg">
+            <div class="dummy">
+                <span
+                    class="text-gray-500 mr-3 inline-flex items-center ml-auto leading-none text-sm pr-3 hover:text-blue-400 ">
+                    <ion-icon name="person-outline" class="text-xl text-blue-400 pe-2"></ion-icon>Wetland
+                </span>
+                <span
+                    class="text-gray-500 mr-3 inline-flex items-center ml-auto leading-none text-sm pr-3 hover:text-blue-400 ">
+                    <ion-icon name="pricetag-outline" class="text-xl text-blue-400 pe-2"></ion-icon>Branding
+                </span>
+                <span class="text-gray-500 inline-flex items-center leading-none text-sm hover:text-blue-400">
+                    <ion-icon name="chatbubble-outline" class="text-xl text-blue-400 pe-2"></ion-icon>No Comments
+                </span>
+            </div>
+            <div class="  lg:w-2/3 w-full">
+                <h1 class="  sm:text-4xl text-3xl mb-4 mt-10 font-extrabold text-primary text-center hover:text-blue-400 transition-all duration-300">The Importance of Instagram Metrics and Where to Find Them!</h1>
+                <p class="text-secondary mb-8">Nancy boy Charles down the pub get stuffed mate easy peasy brown bread
+                    car boot squiffy loo, blimey arse over tit it’s your round cup of char horse play chimney pot old.
+                    Chip shop bonnet barney owt to do with me what a plonker hotpot loo that gormless off his nut a
+                    blinding shot Harry […]</p>
+                <div class="text-center">
+                    <button
+                        class="inline-flex text-white bg-blue-500 border-0 py-2 px-6 focus:outline-none hover:bg-white hover:text-[#0d6efd] transition-all duration-500 rounded-lg text-lg">Read
+                        More</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--footer -->
+    <footer class="py-[100px] bg-[#f4f9fd]">
+        <div class="container mx-auto">
+            
+            <div class="flex md:items-center lg:items-start md:flex-row flex-wrap flex-col">
+                <div class="lg:w-2/12 md:w-6/12 w-12/12 px-4 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
+                    <img src="img/logo.png" alt="">
+                    <p class="mt-4 text-sm text-gray-500 font-bold ps-2">Ever since we started using we’ve , and more.
+                    </p>
+                </div>
+                <div class="lg:w-3/12 md:w-6/12 w-12/12 px-4 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
+                    <h2 class="font-bold text-black">Overview</h2>
+                    <nav class="list-none ps-2 py-4">
+                        <li class="py-2">
+                            <a
+                                class="text-gray-400 font-semibold text-sm hover:text-[#6c63ff] duration-500 hover:border-b-2 hover:border-[#6c63ff]">Terms</a>
+                        </li>
+                        <li class="py-2">
+                            <a
+                                class="text-gray-400 font-semibold text-sm hover:text-[#6c63ff] duration-500 hover:border-b-2 hover:border-[#6c63ff]">Privacy
+                                Policy</a>
+                        </li>
+                        <li class="py-2">
+                            <a
+                                class="text-gray-400 font-semibold text-sm hover:text-[#6c63ff] duration-500 hover:border-b-2 hover:border-[#6c63ff]">Cookies</a>
+                        </li>
+                        <li class="py-2">
+                            <a
+                                class="text-gray-400 font-semibold text-sm hover:text-[#6c63ff] duration-500 hover:border-b-2 hover:border-[#6c63ff]">Integrations</a>
+                        </li>
+                    </nav>
+                </div>
+                <div class="lg:w-3/12 md:w-6/12 w-12/12 px-4 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
+                    <h2 class="font-bold">Customer</h2>
+                    <nav class="list-none mb-10 ps-2 py-4">
+                        <li class="py-3">
+                            <a
+                                class="text-gray-400 font-semibold text-sm hover:text-[#6c63ff] duration-500 hover:border-b-2 hover:border-[#6c63ff]">Product</a>
+                        </li>
+                        <li class="py-3">
+                            <a
+                                class="text-gray-400 font-semibold text-sm hover:text-[#6c63ff] duration-500 hover:border-b-2 hover:border-[#6c63ff]">Pricing</a>
+                        </li>
+                        <li class="py-3">
+                            <a
+                                class="text-gray-400 font-semibold text-sm hover:text-[#6c63ff] duration-500 hover:border-b-2 hover:border-[#6c63ff]">Integrations</a>
+                        </li>
+
+                    </nav>
+                </div>
+                <div class="lg:w-2/12 md:w-6/12 w-12/12 px-4 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
+                    <h2 class="font-bold">Product</h2>
+                    <nav class="list-none mb-10 ps-2 py-2">
+                        <li class="py-3">
+                            <a
+                                class="text-gray-400 font-semibold text-sm hover:text-[#6c63ff] duration-500 hover:border-b-2 hover:border-[#6c63ff]">Getting
+                                Started</a>
+                        </li>
+                        <li class="py-3">
+                            <a
+                                class="text-gray-400 font-semibold text-sm hover:text-[#6c63ff] duration-500 hover:border-b-2 hover:border-[#6c63ff]">Style
+                                Guide</a>
+                        </li>
+                        <li class="py-3">
+                            <a
+                                class="text-gray-400 font-semibold text-sm hover:text-[#6c63ff] duration-500 hover:border-b-2 hover:border-[#6c63ff]">Licences</a>
+                        </li>
+                        <li class="py-3">
+                            <a
+                                class="text-gray-400 font-semibold text-sm hover:text-[#6c63ff] duration-500 hover:border-b-2 hover:border-[#6c63ff]">Changelog</a>
+                        </li>
+                    </nav>
+                </div>
+                <div class="lg:w-2/12 md:w-6/12 w-12/12 px-4 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
+                    <h2 class="font-bold">Follow Us</h2>
+                    <span class="mx-auto inline-flex sm:ml-auto sm:mt-0 mt-2  ">
+                        <a class="text-gray-400 duration-500 hover:text-white">
+                            <i
+                                class="fa-brands fa-facebook-f p-3 border-2 rounded-full hover:bg-[#6c63ff] hover:border-[#6c63ff]"></i>
+                        </a>
+                        <a class="ml-3 text-gray-400 duration-500 hover:text-white">
+                            <i
+                                class="fa-brands fa-twitter p-3 border-2 rounded-full hover:bg-[#6c63ff] hover:border-[#6c63ff]"></i>
+                        </a>
+                        <a class="ml-3 text-gray-400 duration-500 hover:text-white">
+                            <i
+                                class="fa-brands fa-pinterest-p p-3 border-2 rounded-full hover:bg-[#6c63ff] hover:border-[#6c63ff]"></i>
+                        </a>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="container mx-auto py-4  px-5 sm:flex-row text-center">
+            <div class="border-t-2 py-2"></div>
+            <a href="#" class="text-gray-400 text-sm">Copyright © 2023 Theme_Pure. All Rights Reserved
+            </a>
+        </div>
+    </footer>
+
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+<script>
+    const navLinks = document.querySelector('.nav-links')
+    function onToggleMenu(e) {
+        e.name = e.name === 'menu' ? 'close' : 'menu'
+        navLinks.classList.toggle('top-[120px]')
+    }
+</script>
+<script>
+    var swiper = new Swiper(".op", {
+        pagination: {
+            el: ".swiper-pagination",
+            dynamicBullets: true,
+        },
+    });
+</script>
+<script>
+    var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        breakpoints: {
+            640: {
+                slidesPerView: 1,
+                spaceBetween: 20,
+            },
+            768: {
+                slidesPerView: 1,
+                spaceBetween: 40,
+            },
+            1024: {
+                slidesPerView: 2,
+                spaceBetween: 50,
+            },
+        },
+    });
+</script>
+<script>
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 500) {
+            $("header").addClass("fixed")
+        }
+        else {
+            $("header").removeClass("fixed")
+        }
+    })
+</script>
+
+</html>

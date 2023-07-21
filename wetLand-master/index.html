@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WetLend</title>
+    <link rel="shortcut icon" href="img/f-logo.png" type="image/x-icon">
+
+    <style>
+        @import url(css/all.min.css);
+    </style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="fonts/fonts.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+
+</head>
+<style>
+    body {
+        font-family: 'Open Sans';
+    }
+
+    .updown-animation {
+        animation: infiniteupdown 4s ease infinite;
+        transition: all .4s;
+    }
+
+    @keyframes infiniteupdown {
+        0% {
+            transform: translateY(0px);
+        }
+
+        50% {
+            transform: translateY(-30px);
+        }
+
+        100% {
+            transform: translateY(0px);
+        }
+    }
+
+    .updown-animation2 {
+        animation: infiniteupdown2 5s ease infinite;
+        transition: all .5s;
+    }
+
+    @keyframes infiniteupdown2 {
+        0% {
+            transform: translateY(0px);
+        }
+
+        50% {
+            transform: translateY(-60px);
+        }
+
+        100% {
+            transform: translateY(0px);
+        }
+    }
+
+    .lefrig-animation {
+        animation: infinitelefrig 5s ease infinite;
+        transition: all .5s;
+    }
+
+    @keyframes infinitelefrig {
+        0% {
+            transform: translatex(0px);
+        }
+
+        50% {
+            transform: translatex(-90px);
+        }
+
+        100% {
+            transform: translatex(0px);
+        }
+    }
+</style>
+<script>
+    tailwind.config = {
+        theme: {
+            extend: {
+                colors: {
+                    'primary': '#070337',
+                    'secondary': '#57556a',
+                },
+
+            }
+        }
+    }
+</script>
+
+<body>
+    <!-- header  -->
+    <header class="bg-white">
+        <nav class="flex justify-between items-center w-[92%] mx-auto py-3">
+            <div class="logo">
+                <img class="w-40" src="img/logo.png" alt="">
+            </div>
+            <nav class="nav-links duration-500 md:static absolute bg-white md:min-h-fit min-h-[60vh] left-0 top-[-110%] md:w-auto w-full flex items-center px-5">
+                <ul class="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-8 text-primary font-semibold">
+                    <li>
+                        <a class="hover:text-[#6c63ff] text-[#6c63ff]" href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a class="hover:text-[#6c63ff]" href="about.html">About</a>
+                    </li>
+                    <li>
+                        <a class="hover:text-[#6c63ff]" href="service.html">Service</a>
+                    </li>
+                    <li>
+                        <a class="hover:text-[#6c63ff]" href="blog.html">Blog</a>
+                    </li>
+                    <li>
+                        <a class="hover:text-[#6c63ff]" href="pages.html">Pages</a>
+                    </li>
+                    <li>
+                        <a class="hover:text-[#6c63ff]" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="flex items-center gap-6">
+                <a href="#"
+                    class=" px-5 py-2 text-primary font-semibold hover:text-[#6c63ff] invisible md:visible">Login</a>
+                <button
+                    class="bg-[#6c63ff] text-white px-7 py-2 rounded-md font-semibold hover:bg-transparent hover:text-[#6c63ff] border-2 border-[#6c63ff] transition  delay-150">Sign</button>
+                <i class="fa-solid fa-bars text-2xl cursor-pointer md:hidden" onclick="onToggleMenu(this)"
+                    name="menu"></i>
+            </div>
+        </nav>
+    </header>
+    <!-- banner section -->
+    <section class="text-gray-600 bg-[url(../img/hero-bg-1024x507.jpg)] bg-cover">
+        <div class="container mx-auto">
+            <div class="flex px-0 md:px-5 py-20 md:py-24 md:flex-row flex-col">
+                <div
+                    class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
+                    <h1 class="text-4xl  md:text-7xl mb-4 text-primary font-black">Creative Saas Design Software. </h1>
+                    <p class="mb-8   text-secondary">Unify your team’s video creation process under one repository to
+                        create, collaborat scale.</p>
+                    <div class="w-full justify-cente py-10">
+                        <input type="email" required placeholder="enter the email ..."
+                            class="inline-flex text-gray-400 w-7/12 capitalize font-medium bg-white py-3 px-8 rounded-md shadow-2xl">
+                        <button class="inline-flex text-white capitalize font-medium bg-[#6c63ff] py-2 px-9 hover:bg-transparent hover:text-[#6c63ff] border-2 border-[#6c63ff]  text-lg rounded-md transition-all duration-500">search</button>
+                    </div>
+                    <div class="flex  justify-between items-center font-black text-primary">
+                        <p class="pe-5 text-gray-400 font-medium"><i class="fa-solid fa-check"></i> No software to
+                            install</p>
+                        <p class="text-gray-400 font-medium"><i class="fa-solid fa-check"></i> No credit card required
+                        </p>
+                    </div>
+
+                </div>
+                <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 flex relative md:block hidden">
+                    <img src="img/hero-circle.png" alt="hero" class="absolute object-center rounded">
+                    <img src="img/hero-1.png" alt="hero1" class="absolute z-10 top-0 object-center rounded">
+                    <img src="img/hero-2.png" alt="hero"
+                        class="absolute z-10 w-6/12 -right-4 -top-4 object-center rounded  updown-animation">
+                    <img src="img/hero-3.png" alt="hero"
+                        class="absolute object-center w-4/12 -left-16 -top-4 rounded  updown-animation">
+                    <img src="img/hero-4.png" alt="hero"
+                        class="absolute z-10 object-center w-10/12 -left-16 -bottom-32 rounded  updown-animation">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--insights result section  -->
+    <section class="text-gray-400 bg-white-900 bg-[url(../img/circle-1.png)] bg-no-repeat ">
+        <div class="container px-5 py-24 mx-auto">
+            <div class="flex flex-wrap w-full mb-20 flex-col items-center text-center">
+                <h1 class="text-2xl md:text-5xl font-black w-12/12 md:w-7/12  mb-2 text-primary">Get Answers, Insights
+                    Result in Simple Steps.</h1>
+                <p class=" w-full   text-[#625e6e]">Elizabeth geeza Why, quain standard guvnor gosh cras
+                    brilliant.</p>
+            </div>
+            <div class="flex flex-wrap">
+                <div class="w-12/12 md:w-6/12 lg:w-3/12 px-4">
+                    <div class="bg-white shadow-2xl p-3 rounded-3xl">
+                        <img src="img/services-1.png" alt="" class="w-10/12 mx-auto">
+                        <h1 class="text-center font-bold text-black capitalize text-xl md:text-2xl pt-3">development
+                        </h1>
+                        <p class="text-center capitalize text-md">Absolutely bladdered he blimey guvnor.</p>
+                    </div>
+                </div>
+                <div class="w-12/12 md:w-6/12 lg:w-3/12 px-4">
+                    <div class="bg-white shadow-2xl p-3 rounded-3xl">
+                        <img src="img/services-2.png" alt="" class="w-8/12 mx-auto">
+                        <h1 class="text-center font-bold text-black capitalize text-xl md:text-2xl pt-3">OptimalSort
+                        </h1>
+                        <p class="text-center capitalize text-md">Nancy Charles down the pub mate easy.</p>
+                    </div>
+                </div>
+                <div class="w-12/12 md:w-6/12 lg:w-3/12 px-4">
+                    <div class="bg-white shadow-2xl p-3 rounded-3xl">
+                        <img src="img/services-3.png" alt="" class="w-8/12 mx-auto">
+                        <h1 class="text-center font-bold text-black capitalize text-xl md:text-2xl pt-3">Influencing
+                        </h1>
+                        <p class="text-center capitalize text-md">Blimey arse over tit it’s your round cup.</p>
+                    </div>
+                </div>
+                <div class="w-12/12 md:w-6/12 lg:w-3/12 px-4">
+                    <div class="bg-white shadow-2xl p-3 rounded-3xl">
+                        <img src="img/services-4.png" alt="" class="w-7/12 mx-auto">
+                        <h1 class="text-center font-bold text-black capitalize text-xl md:text-2xl pt-3">Technology</h1>
+                        <p class="text-center capitalize text-md">Absolutely bladdered he blimey guvnor.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Insights result details section  -->
+    <section class="bg-[url(../img/circle-3.png)] bg-no-repeat bg-right-top py-[100px]">
+        <div class="container mx-auto">
+            <div class="flex flex-wrap items-center">
+                <div class="w-12/12 md:w-6/12 order-2 md:order-1 md:p-3 p-0 py-4 text-center lg:text-start">
+                    <div class="content px-0 md:px-12">
+                        <h2 class="text-3xl md:text-5xl font-black p-0">Get the Perfect Solution for Your
+                            Web.</h2>
+                        <p class="text-sm text-gray-500 p-0 md:py-4 md:pl-4">Starkers pardon you knees up is
+                            Elizabeth geeza Why, quain standard guvnor gosh cras brilliant.</p>
+                        <div class="font-black text-primary">
+                            <p class="font-medium text-sm hover:text-[#6c63ff] hover:translate-x-2 duration-500"><i
+                                    class="fa-solid fa-check text-gray-400"></i> Intergate With Popular Softwares item
+                            </p>
+                            <p class="text-sm font-medium hover:text-[#6c63ff] hover:translate-x-2 duration-500"><i
+                                    class="fa-solid fa-check text-gray-400"></i> Instantly Create Your Crowdfunding
+                                Platform</p>
+                        </div>
+                        <div class="w-full justify-cente py-10">
+                            <button
+                                class="inline-flex text-white capitalize font-medium bg-[#6c63ff] py-2 px-9 hover:shadow-2xl border-2 border-[#6c63ff]  text-lg rounded-md transition-all duration-500">get
+                                started</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-12/12 md:w-6/12 order-1 md:order-2">
+                    <div class="mobile-screen w-full relative">
+                        <img src="img/about-bg.png" class="">
+                        <img src="img/about-1-559x1024.png" class="absolute left-0 bottom-0 right-0 w-6/12 mx-auto">
+                        <img src="img/about-1-1.png"
+                            class="absolute z-10 left-4 bottom-32 updown-animation rounded-2xl w-4/12 mx-auto">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Insights result details section2  -->
+    <section class="bg-[url(../img/circle-5.png)] bg-no-repeat bg-left-top py-[100px]">
+        <div class="container mx-auto">
+            <div class="flex flex-wrap items-center">
+                <div class="w-12/12 md:w-6/12">
+                    <div class="mobile-screen relative">
+                        <img src="img/about-bg-2.png" class="relative">
+                        <img src="img/about-2-559x1024.png" class="absolute left-16 bottom-0 w-6/12 mx-auto">
+                        <img src="img/about-2-1.png"
+                            class="absolute z-10 right-48 bottom-32 updown-animation rounded-2xl w-3/12 mx-auto">
+                    </div>
+                </div>
+                <div
+                    class="w-12/12 md:w-6/12 bg-[url(../img/circle-2.png)] py-4 text-center lg:text-start bg-no-repeat bg-right-bottom">
+                    <div class="content px-0 md:px-12">
+                        <h2 class="text-3xl md:text-5xl font-black p-0">
+                            Awesome Prototyping Tool for UI/UX.</h2>
+                        <p class="text-sm text-gray-500 p-0 md:py-4 md:pl-4">Starkers pardon you knees up is
+                            Elizabeth geeza Why, quain standard guvnor gosh cras brilliant.</p>
+                        <div class="font-black text-primary">
+                            <p class="font-medium text-sm hover:text-[#6c63ff] hover:translate-x-2 duration-500"><i
+                                    class="fa-solid fa-check text-gray-400"></i> Intergate With Popular Softwares item
+                            </p>
+                            <p class="text-sm font-medium hover:text-[#6c63ff] hover:translate-x-2 duration-500"><i
+                                    class="fa-solid fa-check text-gray-400"></i> Instantly Create Your Crowdfunding
+                                Platform</p>
+                        </div>
+                        <div class="w-full justify-cente py-10">
+                            <button
+                                class="inline-flex text-white capitalize font-medium bg-[#6c63ff] py-2 px-9 hover:shadow-2xl border-2 border-[#6c63ff]  text-lg rounded-md transition-all duration-500">get
+                                started</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- our paln section  -->
+    <section class="py-[100px] bg-[url(../img/circle-4.png)] bg-no-repeat">
+        <div class="container mx-auto">
+            <div class="flex flex-wrap w-full mb-20 flex-col items-center text-center">
+                <h1 class="text-2xl md:text-5xl font-black w-12/12 md:w-7/12  mb-2 text-primary">Software is Easy
+                    Prototyping
+                    about on the web.</h1>
+            </div>
+            <div class="flex flex-wrap">
+                <div class="w-12/12 md:w-4/12 p-2 px-3">
+                    <div class="bg-white shadow-2xl px-2 md:px-12 py-8 rounded-3xl">
+                        <p class=" capitalize text-md">free</p>
+                        <h1 class=" font-bold text-black capitalize text-xl md:text-3xl pt-3">$00
+                        </h1>
+                        <p class="capitalize text-md pt-3">Start for free pick a plan later,You can cancel any time.</p>
+                        <div class="font-black text-primary py-8 pl-2">
+                            <p class="font-medium text-sm hover:text-[#6c63ff] hover:translate-x-4 duration-500"><i
+                                    class="fa-solid fa-check"></i> 1GB Cloud Storage</p>
+                            <p class="text-sm font-medium hover:text-[#6c63ff] hover:translate-x-4 py-4 duration-500"><i
+                                    class="fa-solid fa-check"></i> Another Great Feature</p>
+                            <p class="text-sm font-medium hover:text-[#6c63ff] hover:translate-x-4 duration-500"><i
+                                    class="fa-solid fa-xmark"></i> Private & Team Folders</p>
+                        </div>
+                        <button
+                            class="inline-flex hover:text-white capitalize font-medium hover:bg-[#6c63ff] py-2 px-[90px] md:px-[100px] bg-transparent text-[#6c63ff] border-2 border-[#6c63ff]  text-lg rounded-md transition-all duration-500">try
+                            for free</button>
+                    </div>
+                </div>
+                <div class="w-12/12 md:w-4/12 p-2 px-3">
+                    <div class="bg-white bg-gradient-to-l from-fuchsia-50 to-purple-50 border-2 border-[#6c63ff] px-2 md:px-12 py-8 rounded-3xl">
+                        <p class=" capitalize text-md">Basic</p>
+                        <h1 class=" font-bold text-black capitalize text-xl md:text-3xl pt-3">$495<sub
+                                class="text-gray-400 text-sm">Monthly</sub>
+                        </h1>
+                        <p class="capitalize text-md pt-3">Start for free pick a plan later,You can cancel any time.</p>
+                        <div class="font-black text-primary py-8 pl-2">
+                            <p class="text-sm font-medium hover:text-[#6c63ff] hover:translate-x-4 duration-500"><i
+                                    class="fa-solid fa-check"></i> Private & Team Folders</p>
+                            <p class="text-sm font-medium hover:text-[#6c63ff] hover:translate-x-4 py-4 duration-500"><i
+                                    class="fa-solid fa-check"></i> Comments</p>
+                            <p class="font-medium text-sm hover:text-[#6c63ff] hover:translate-x-4 duration-500"><i
+                                    class="fa-solid fa-xmark"></i> Embed Share Link</p>
+                            <p class="font-medium text-sm hover:text-[#6c63ff] hover:translate-x-4 py-4 duration-500"><i
+                                    class="fa-solid fa-check"></i> Exciting Feature</p>
+                        </div>
+                        <button
+                            class="inline-flex text-white capitalize font-medium bg-[#6c63ff] py-2 px-[90px] md:px-[100px] hover:bg-transparent hover:text-[#6c63ff] border-2 border-[#6c63ff]  text-lg rounded-md transition-all duration-500">try
+                            for free</button>
+                    </div>
+                </div>
+                <div class="w-12/12 md:w-4/12 p-2 px-3">
+                    <div class="bg-white shadow-2xl px-2 md:px-12 py-8 rounded-3xl">
+                        <p class=" capitalize text-md">Enterprise</p>
+                        <h1 class=" font-bold text-black capitalize text-xl md:text-3xl pt-3">$837<sub
+                                class="text-gray-400 text-sm">Yearly</sub></h1>
+                        <p class="capitalize text-md pt-3">Start for free pick a plan later,You can cancel any time.</p>
+                        <div class="font-black text-primary py-8 pl-2">
+                            <p class="text-sm font-medium hover:text-[#6c63ff] hover:translate-x-4 duration-500"><i
+                                    class="fa-solid fa-xmark"></i> Private & Team Folders</p>
+                            <p class="font-medium text-sm hover:text-[#6c63ff] hover:translate-x-4 py-4 duration-500"><i
+                                    class="fa-solid fa-check"></i> Another Great Feature</p>
+                            <p class="text-sm font-medium hover:text-[#6c63ff] hover:translate-x-4 duration-500"><i
+                                    class="fa-solid fa-check"></i> Obsolete Feature</p>
+                            <p class="text-sm font-medium hover:text-[#6c63ff] hover:translate-x-4 py-4 duration-500"><i
+                                    class="fa-solid fa-xmark"></i> Exciting Feature</p>
+                            <p class="text-sm font-medium hover:text-[#6c63ff] hover:translate-x-4 duration-500"><i
+                                    class="fa-solid fa-xmark"></i> Export to PNG</p>
+                        </div>
+                        <button
+                            class="inline-flex hover:text-white capitalize font-medium hover:bg-[#6c63ff] py-2 px-[90px] md:px-[100px] bg-transparent text-[#6c63ff] border-2 border-[#6c63ff]  text-lg rounded-md transition-all duration-500">try
+                            for free</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--testimoniol section  -->
+    <section class="bg-[url(../img/circle-5.png)] bg-no-repeat bg-left-top">
+        <div class="container px-5 py-24 mx-auto">
+            <div class="flex flex-wrap w-full mb-20 flex-col items-center text-center">
+                <h1 class="text-3xl w-12/12 md:w-5/12  md:text-5xl font-bold   mb-2 text-primary">What People Say
+                    About Our Products.
+                </h1>
+            </div>
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class=" testimonail p-8 text-center md:text-start">
+                            <div class="drop-shadow-md bg-white rounded-lg p-[40px] ">
+                                <img class="w-2/12 mx-auto lg:mx-0" src="img/testi-1.png" alt="content">
+                                <p class="text-secondary font-semibold py-5">‘’Cobblers posh cras victoria sponge some
+                                    dodgy chaverat barney only a quid, boot bubble and squeak wind up bits and boes
+                                    bleeding up the duff brolly. ’’ </p>
+                                <h2
+                                    class="text-lg font-semibold cursor-pointer hover:text-[#6c63ff] transition-all duration-500 capitalize">
+                                    john shin</h2>
+                                <h2
+                                    class="text-gray-400 text-sm font-semibold cursor-pointer hover:text-[#6c63ff] transition-all duration-500">
+                                    Graphic Designer</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class=" testimonail p-8 text-center md:text-start">
+                            <div class="drop-shadow-md bg-white rounded-lg p-[40px] ">
+                                <img class="w-2/12 mx-auto lg:mx-0" src="img/testi-2.png" alt="content">
+                                <p class="text-secondary font-semibold py-5">‘’Cobblers posh cras victoria sponge some
+                                    dodgy chaverat barney only a quid, boot bubble and squeak wind up bits and boes
+                                    bleeding up the duff brolly. ’’ </p>
+                                <h2
+                                    class="text-lg font-semibold cursor-pointer hover:text-[#6c63ff] transition-all duration-500 capitalize">
+                                    elon gates</h2>
+                                <h2
+                                    class="text-gray-400 text-sm font-semibold cursor-pointer hover:text-[#6c63ff] transition-all duration-500 capitalize">
+                                    Graphic Designer</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class=" testimonail p-8 text-center md:text-start">
+                            <div class="drop-shadow-md bg-white rounded-lg p-[40px] ">
+                                <img class="w-2/12 mx-auto lg:mx-0" src="img/testi-3.png" alt="content">
+                                <p class="text-secondary font-semibold py-5">‘’Cobblers posh cras victoria sponge some
+                                    dodgy chaverat barney only a quid, boot bubble and squeak wind up bits and boes
+                                    bleeding up the duff brolly. ’’ </p>
+                                <h2
+                                    class="text-lg font-semibold cursor-pointer hover:text-[#6c63ff] transition-all duration-500 capitalize">
+                                    lily Gomza</h2>
+                                <h2
+                                    class="text-gray-400 text-sm font-semibold cursor-pointer hover:text-[#6c63ff] transition-all duration-500 capitalize">
+                                    developer</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class=" testimonail p-8 text-center md:text-start">
+                            <div class="drop-shadow-md bg-white rounded-lg p-[40px] ">
+                                <img class="w-2/12 mx-auto lg:mx-0" src="img/testi-4.png" alt="content">
+                                <p class="text-secondary font-semibold py-5">‘’Cobblers posh cras victoria sponge some
+                                    dodgy chaverat barney only a quid, boot bubble and squeak wind up bits and boes
+                                    bleeding up the duff brolly. ’’ </p>
+                                <h2
+                                    class="text-lg font-semibold cursor-pointer hover:text-[#6c63ff] transition-all duration-500 capitalize">
+                                    shinna</h2>
+                                <h2
+                                    class="text-gray-400 text-sm font-semibold cursor-pointer hover:text-[#6c63ff] transition-all duration-500 capitalize">
+                                    Designer</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class=" testimonail p-8 text-center md:text-start">
+                            <div class="drop-shadow-md bg-white rounded-lg p-[40px] ">
+                                <img class="w-2/12 mx-auto lg:mx-0" src="img/testi-5.png" alt="content">
+                                <p class="text-secondary font-semibold py-5">‘’Cobblers posh cras victoria sponge some
+                                    dodgy chaverat barney only a quid, boot bubble and squeak wind up bits and boes
+                                    bleeding up the duff brolly. ’’ </p>
+                                <h2
+                                    class="text-lg font-semibold cursor-pointer hover:text-[#6c63ff] transition-all duration-500 capitalize">
+                                    victor Gated</h2>
+                                <h2
+                                    class="text-gray-400 text-sm font-semibold cursor-pointer hover:text-[#6c63ff] transition-all duration-500 uppercase">
+                                    ceo</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </section>
+    <!-- Prototyping section  -->
+    <section class="bg-[url(../img/circle-6.png)] bg-no-repeat bg-right-top py-[100px]">
+        <div class="container mx-auto">
+            <div class="flex flex-wrap w-full mb-20">
+                <div class="lg:w-1/2 w-full mb-6 lg:mb-0">
+                    <h1 class=" text-3xl md:text-4xl font-extrabold  mb-2 text-primary">Software is Easy <br>
+                        Prototyping
+                        Features.</h1>
+                    <div class="h-1 w-20 bg-indigo-500 rounded"></div>
+                    <p class="lg:w-12/12 w-full text-secondary text-sm">Over the last few years, podcasts have become a
+                        role in the online landscape.</p>
+                </div>
+            </div>
+            <div class="flex flex-wrap ">
+                <div class="xl:w-3/12 md:w-6/12 w-12/12 p-4 ">
+                    <div class="feature p-6 rounded-lg ">
+                        <div
+                            class="w-14 h-14 inline-flex shadow-2xl items-center justify-center rounded-full bg-[#FE0C7D] mb-7 drop-shadow-xl hover:translate-x-14 transition-all duration-500">
+                            <i class="fa-solid fa-heart-pulse text-white text-3xl"></i>
+                        </div>
+                        <h2 class="text-2xl text-primary font-bold  mb-2">API management</h2>
+                        <p class="pt-5 hover:text-green-500"><i
+                                class="fa-solid fa-check fa-bounce mr-4 hover:bg-green-500 hover:text-green-200 bg-green-200 text-green-500 p-1 rounded-full"></i>
+                            Secure Access</p>
+                        <p class="pt-5 hover:text-green-500"><i
+                                class="fa-solid fa-check fa-bounce mr-4 hover:bg-green-500 hover:text-green-200 bg-green-200 text-green-500 p-1 rounded-full"></i>
+                            Connectivity</p>
+                        <p class="pt-5 hover:text-green-500"><i
+                                class="fa-solid fa-check fa-bounce mr-4 hover:bg-green-500 hover:text-green-200 bg-green-200 text-green-500 p-1 rounded-full"></i>
+                            Engagement</p>
+                        <p class="pt-5 hover:text-green-500"><i
+                                class="fa-solid fa-check fa-bounce mr-4 hover:bg-green-500 hover:text-green-200 bg-green-200 text-green-500 p-1 rounded-full"></i>
+                            Secure Access</p>
+                    </div>
+                </div>
+                <div class="xl:w-3/12 md:w-6/12 w-12/12 p-4 ">
+                    <div class="feature p-6 rounded-lg ">
+                        <div
+                            class="w-14 h-14 inline-flex shadow-2xl items-center justify-center rounded-full bg-[#6EC1E4] mb-7 drop-shadow-xl hover:translate-x-14 transition-all duration-500">
+                            <i class="fa-solid fa-chart-pie text-white text-3xl"></i>
+                        </div>
+                        <h2 class="text-2xl text-primary font-bold  mb-2">Prepare your brand</h2>
+                        <p class="pt-5 hover:text-green-500"><i
+                                class="fa-solid fa-check fa-bounce mr-4 hover:bg-green-500 hover:text-green-200 bg-green-200 text-green-500 p-1 rounded-full"></i>
+                            Publish anywhere</p>
+                        <p class="pt-5 hover:text-green-500"><i
+                                class="fa-solid fa-check fa-bounce mr-4 hover:bg-green-500 hover:text-green-200 bg-green-200 text-green-500 p-1 rounded-full"></i>
+                            Influencer</p>
+                        <p class="pt-5 hover:text-green-500"><i
+                                class="fa-solid fa-check fa-bounce mr-4 hover:bg-green-500 hover:text-green-200 bg-green-200 text-green-500 p-1 rounded-full"></i>
+                            Content Creation</p>
+                        <p class="pt-5 hover:text-green-500"><i
+                                class="fa-solid fa-check fa-bounce mr-4 hover:bg-green-500 hover:text-green-200 bg-green-200 text-green-500 p-1 rounded-full"></i>
+                            Prepare your brand</p>
+                    </div>
+                </div>
+                <div class="xl:w-3/12 md:w-6/12 w-12/12 p-4 ">
+                    <div class="feature p-6 rounded-lg ">
+                        <div
+                            class="w-14 h-14 inline-flex shadow-2xl items-center justify-center rounded-full bg-[#fcb900] mb-7 drop-shadow-xl hover:translate-x-14 transition-all duration-500">
+                            <i class="fa-solid fa-tag text-white text-3xl"></i>
+                        </div>
+                        <h2 class="text-2xl text-primary font-bold  mb-2">Compliance Controls</h2>
+                        <p class="pt-5 hover:text-green-500"><i
+                                class="fa-solid fa-check fa-bounce mr-4 hover:bg-green-500 hover:text-green-200 bg-green-200 text-green-500 p-1 rounded-full"></i>
+                            Animations</p>
+                        <p class="pt-5 hover:text-green-500"><i
+                                class="fa-solid fa-check fa-bounce mr-4 hover:bg-green-500 hover:text-green-200 bg-green-200 text-green-500 p-1 rounded-full"></i>
+                            3D Viewer</p>
+                        <p class="pt-5 hover:text-green-500"><i
+                                class="fa-solid fa-check fa-bounce mr-4 hover:bg-green-500 hover:text-green-200 bg-green-200 text-green-500 p-1 rounded-full"></i>
+                            Creation</p>
+                        <p class="pt-5 hover:text-green-500"><i
+                                class="fa-solid fa-check fa-bounce mr-4 hover:bg-green-500 hover:text-green-200 bg-green-200 text-green-500 p-1 rounded-full"></i>
+                            Packaging Designer</p>
+                    </div>
+                </div>
+                <div class="xl:w-3/12 md:w-6/12 w-12/12 p-4 ">
+                    <div class="feature p-6 rounded-lg ">
+                        <div
+                            class="w-14 h-14 inline-flex shadow-2xl items-center justify-center rounded-full bg-[#9b51e0] mb-7 drop-shadow-xl hover:translate-x-14 transition-all duration-500">
+                            <i class="fa-solid fa-layer-group text-white text-3xl"></i>
+                        </div>
+                        <h2 class="text-2xl text-primary font-bold  mb-2">Authentication</h2>
+                        <p class="pt-5 hover:text-green-500"><i
+                                class="fa-solid fa-check fa-bounce mr-4 hover:bg-green-500 hover:text-green-200 bg-green-200 text-green-500 p-1 rounded-full"></i>
+                            Print Templates</p>
+                        <p class="pt-5 hover:text-green-500"><i
+                                class="fa-solid fa-check fa-bounce mr-4 hover:bg-green-500 hover:text-green-200 bg-green-200 text-green-500 p-1 rounded-full"></i>
+                            Mockups</p>
+                        <p class="pt-5 hover:text-green-500"><i
+                                class="fa-solid fa-check fa-bounce mr-4 hover:bg-green-500 hover:text-green-200 bg-green-200 text-green-500 p-1 rounded-full"></i>
+                            Statement</p>
+                        <p class="pt-5 hover:text-green-500"><i
+                                class="fa-solid fa-check fa-bounce mr-4 hover:bg-green-500 hover:text-green-200 bg-green-200 text-green-500 p-1 rounded-full"></i>
+                            Recruitment</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--footer -->
+    <footer class=" bg-[#f4f9fd]">
+        <div class="container mx-auto">
+            <div
+                class="footer-content md:block hidden md:-translate-y-28 w-11/12 mx-auto bg-[#6c63ff] rounded-2xl overflow-hidden">
+                <div class="shape ">
+                    <img src="img/cta-circle.png" class="right-[0] top-[30%] opacity-30 absolute fa-bounce" alt="">
+                    <img src="img/cta-triangle.png" class="right-[0] top-[10%] opacity-30 absolute fa-spin" alt="">
+                    <img src="img/circle-4.png" class="left-[0] top-[10%] opacity-30 absolute" alt="">
+                    <img src="img/cta-triangle.png" class="left-[50%] top-[10%] opacity-30 absolute fa-spin" alt="">
+                </div>
+                <div class="flex p-[105px]">
+                    <h1 class="text-2xl md:w-6/12 w-12/12  md:text-4xl font-bold text-white mb-4">Make Your Own Website
+                        Get Started with Theme Pure</h1>
+                    <div class="md:w-6/12 w-12/12 relative">
+                        <button
+                            class="text-[#6c63ff] absolute md:right-[20%] left- px-9 py-2 capitalize font-medium bg-white hover:shadow-2xl border-2 border-[#6c63ff]  text-lg rounded-md transition-all duration-500">try
+                            for free</button>
+                    </div>
+
+                </div>
+            </div>
+            <div class="flex md:items-center lg:items-start md:flex-row flex-wrap flex-col">
+                <div class="lg:w-2/12 md:w-6/12 w-12/12 px-4 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
+                    <img src="img/logo.png" alt="">
+                    <p class="mt-4 text-sm text-gray-500 font-bold ps-2">Ever since we started using we’ve , and more.
+                    </p>
+                </div>
+                <div class="lg:w-3/12 md:w-6/12 w-12/12 px-4 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
+                    <h2 class="font-bold text-black">Overview</h2>
+                    <nav class="list-none ps-2 py-4">
+                        <li class="py-2">
+                            <a
+                                class="text-gray-400 font-semibold text-sm hover:text-[#6c63ff] duration-500 hover:border-b-2 hover:border-[#6c63ff]">Terms</a>
+                        </li>
+                        <li class="py-2">
+                            <a
+                                class="text-gray-400 font-semibold text-sm hover:text-[#6c63ff] duration-500 hover:border-b-2 hover:border-[#6c63ff]">Privacy
+                                Policy</a>
+                        </li>
+                        <li class="py-2">
+                            <a
+                                class="text-gray-400 font-semibold text-sm hover:text-[#6c63ff] duration-500 hover:border-b-2 hover:border-[#6c63ff]">Cookies</a>
+                        </li>
+                        <li class="py-2">
+                            <a
+                                class="text-gray-400 font-semibold text-sm hover:text-[#6c63ff] duration-500 hover:border-b-2 hover:border-[#6c63ff]">Integrations</a>
+                        </li>
+                    </nav>
+                </div>
+                <div class="lg:w-3/12 md:w-6/12 w-12/12 px-4 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
+                    <h2 class="font-bold">Customer</h2>
+                    <nav class="list-none mb-10 ps-2 py-4">
+                        <li class="py-3">
+                            <a
+                                class="text-gray-400 font-semibold text-sm hover:text-[#6c63ff] duration-500 hover:border-b-2 hover:border-[#6c63ff]">Product</a>
+                        </li>
+                        <li class="py-3">
+                            <a
+                                class="text-gray-400 font-semibold text-sm hover:text-[#6c63ff] duration-500 hover:border-b-2 hover:border-[#6c63ff]">Pricing</a>
+                        </li>
+                        <li class="py-3">
+                            <a
+                                class="text-gray-400 font-semibold text-sm hover:text-[#6c63ff] duration-500 hover:border-b-2 hover:border-[#6c63ff]">Integrations</a>
+                        </li>
+
+                    </nav>
+                </div>
+                <div class="lg:w-2/12 md:w-6/12 w-12/12 px-4 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
+                    <h2 class="font-bold">Product</h2>
+                    <nav class="list-none mb-10 ps-2 py-2">
+                        <li class="py-3">
+                            <a
+                                class="text-gray-400 font-semibold text-sm hover:text-[#6c63ff] duration-500 hover:border-b-2 hover:border-[#6c63ff]">Getting
+                                Started</a>
+                        </li>
+                        <li class="py-3">
+                            <a
+                                class="text-gray-400 font-semibold text-sm hover:text-[#6c63ff] duration-500 hover:border-b-2 hover:border-[#6c63ff]">Style
+                                Guide</a>
+                        </li>
+                        <li class="py-3">
+                            <a
+                                class="text-gray-400 font-semibold text-sm hover:text-[#6c63ff] duration-500 hover:border-b-2 hover:border-[#6c63ff]">Licences</a>
+                        </li>
+                        <li class="py-3">
+                            <a
+                                class="text-gray-400 font-semibold text-sm hover:text-[#6c63ff] duration-500 hover:border-b-2 hover:border-[#6c63ff]">Changelog</a>
+                        </li>
+                    </nav>
+                </div>
+                <div class="lg:w-2/12 md:w-6/12 w-12/12 px-4 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
+                    <h2 class="font-bold">Follow Us</h2>
+                    <span class="mx-auto inline-flex sm:ml-auto sm:mt-0 mt-2  ">
+                        <a class="text-gray-400 duration-500 hover:text-white">
+                            <i
+                                class="fa-brands fa-facebook-f p-3 border-2 rounded-full hover:bg-[#6c63ff] hover:border-[#6c63ff]"></i>
+                        </a>
+                        <a class="ml-3 text-gray-400 duration-500 hover:text-white">
+                            <i
+                                class="fa-brands fa-twitter p-3 border-2 rounded-full hover:bg-[#6c63ff] hover:border-[#6c63ff]"></i>
+                        </a>
+                        <a class="ml-3 text-gray-400 duration-500 hover:text-white">
+                            <i
+                                class="fa-brands fa-pinterest-p p-3 border-2 rounded-full hover:bg-[#6c63ff] hover:border-[#6c63ff]"></i>
+                        </a>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="container mx-auto py-4  px-5 sm:flex-row text-center">
+            <div class="border-t-2 py-2"></div>
+            <a href="#" class="text-gray-400 text-sm">Copyright © 2023 Theme_Pure. All Rights Reserved
+            </a>
+        </div>
+    </footer>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+<script>
+    const navLinks = document.querySelector('.nav-links')
+    function onToggleMenu(e) {
+        e.name = e.name === 'menu' ? 'close' : 'menu'
+        navLinks.classList.toggle('top-[120px]')
+    }
+</script>
+<script>
+    var swiper = new Swiper(".op", {
+        pagination: {
+            el: ".swiper-pagination",
+            dynamicBullets: true,
+        },
+    });
+</script>
+<script>
+    var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        breakpoints: {
+            640: {
+                slidesPerView: 1,
+                spaceBetween: 20,
+            },
+            768: {
+                slidesPerView: 1,
+                spaceBetween: 40,
+            },
+            1024: {
+                slidesPerView: 2,
+                spaceBetween: 50,
+            },
+        },
+    });
+</script>
+<script>
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 500) {
+            $("header").addClass("fixed")
+        }
+        else {
+            $("header").removeClass("fixed")
+        }
+    })
+</script>
+</html>

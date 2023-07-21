@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WetLend-Pages</title>
+    <link rel="shortcut icon" href="img/f-logo.png" type="image/x-icon">
+
+    <style>
+        @import url(css/all.min.css);
+    </style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="fonts/fonts.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+
+</head>
+<style>
+    body {
+        font-family: 'Open Sans';
+    }
+</style>
+<script>
+    tailwind.config = {
+        theme: {
+            extend: {
+                colors: {
+                    'primary': '#070337',
+                    'secondary': '#57556a',
+                },
+
+            }
+        }
+    }
+</script>
+
+<body>
+    
+    <!-- header  -->
+    <header class="bg-white">
+        <nav class="flex justify-between items-center w-[92%] mx-auto py-3">
+            <div class="logo">
+                <img class="w-40" src="img/logo.png" alt="">
+            </div>
+            <nav class="nav-links duration-500 md:static absolute bg-white md:min-h-fit min-h-[60vh] left-0 top-[-110%] md:w-auto w-full flex items-center px-5">
+                <ul class="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-8 text-primary font-semibold">
+                    <li>
+                        <a class="hover:text-[#6c63ff]" href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a class="hover:text-[#6c63ff]" href="about.html">About</a>
+                    </li>
+                    <li>
+                        <a class="hover:text-[#6c63ff]" href="service.html">Service</a>
+                    </li>
+                    <li>
+                        <a class="hover:text-[#6c63ff]" href="blog.html">Blog</a>
+                    </li>
+                    <li>
+                        <a class="hover:text-[#6c63ff] text-[#6c63ff]" href="pages.html">Pages</a>
+                    </li>
+                    <li>
+                        <a class="hover:text-[#6c63ff]" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="flex items-center gap-6">
+                <a href="#"
+                    class=" px-5 py-2 text-primary font-semibold hover:text-[#6c63ff] invisible md:visible">Login</a>
+                <button
+                    class="bg-[#6c63ff] text-white px-7 py-2 rounded-md font-semibold hover:bg-transparent hover:text-[#6c63ff] border-2 border-[#6c63ff] transition  delay-150">Sign</button>
+                <i class="fa-solid fa-bars text-2xl cursor-pointer md:hidden" onclick="onToggleMenu(this)"
+                    name="menu"></i>
+            </div>
+        </nav>
+    </header>
+    <!-- banner -->
+    <section class="bg-[url('/img/page-title.jpg')] py-36 relative">
+        <div class="dummy">
+            <img src="img/dot-2.png" class="left-[0] top-[21%] absolute animate-bounce" alt="">
+            <img src="img/dot-4.png" class="left-[32%] bottom-[10%]  absolute animate-ping" alt="">
+            <img src="img/triangle-2.png" class="right-[19%] top-[20%] absolute animate-spin" alt="">
+            <img src="img/dot-3.png" class="right-[9%] top-[6%] absolute animate-ping" alt="">
+            <img src="img/plus.png" class="right-[0] bottom-[-17%]  absolute" alt="">
+            <img src="img/triangle-1.png" class="left-[19%] top-[32%] animate-spin absolute  " alt="">
+        </div>
+        <div class="container">
+            <div class="text-center">
+                <h3 class="text-6xl text-white font-black mb-2">Pages</h3>
+                <a href="index.html" class="text-primary font-semibold fs-4">Home</a>
+                <a href="#" class="text-white">/ Pages</span>
+            </div>
+        </div>
+    </section>
+    <!--detail section  -->
+    <section class="bg-white">
+        <div class="container px-5 py-24 mx-auto">
+            <div class="flex flex-col text-center w-full mb-20">
+                <h1 class="sm:text-4xl md:text-5xl font-bold mb-4 text-primary">Master Cleanse Reliac Heirloom</h1>
+                <p class="lg:w-2/3 mx-auto  text-base">Elizabeth geeza quain standard guvnor gosh cras
+                    brilliant</p>
+            </div>
+            <div class="flex flex-wrap -m-4">
+                <div class="lg:w-1/3 sm:w-1/2 p-4 overflow-hidden">
+                    <div class="flex relative">
+                        <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center"
+                            src="img/port-4-1.jpg">
+                        <div
+                            class="px-8 py-36 relative z-10 w-full border-4 border-gray-800 bg-gray-900 opacity-0 hover:opacity-90 transition-all duration-500">
+                            <h2 class="tracking-widest text-sm   font-medium text-blue-400 mb-1">Latest Brand
+
+                            </h2>
+                            <h1 class="  text-lg font-medium text-white mb-3">Shooting Stars</h1>
+                            <p class="  text-white">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing
+                                microdosing tousled waistcoat.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:w-1/3 sm:w-1/2 p-4 overflow-hidden">
+                    <div class="flex relative">
+                        <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center"
+                            src="img/port-2-1.jpg">
+                        <div
+                            class="px-8 py-36 relative z-10 w-full border-4 border-gray-800 bg-gray-900 opacity-0 hover:opacity-90 transition-all duration-500">
+                            <h2 class="tracking-widest text-sm   font-medium text-blue-400 mb-1">Full Branding Crew
+                            </h2>
+                            <h1 class="  text-lg font-medium text-white mb-3">The Catalyzer</h1>
+                            <p class="  text-white">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing
+                                microdosing tousled waistcoat.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:w-1/3 sm:w-1/2 p-4 overflow-hidden">
+                    <div class="flex relative">
+                        <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center"
+                            src="img/port-1.png">
+                        <div
+                            class="px-8 py-36 relative z-10 w-full border-4 border-gray-800 bg-gray-900 opacity-0 hover:opacity-90 transition-all duration-500">
+                            <h2 class="tracking-widest text-sm   font-medium text-blue-400 mb-1">Full Branding Crew
+                            </h2>
+                            <h1 class="  text-lg font-medium text-white mb-3">The 400 Blows</h1>
+                            <p class="text-white">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing
+                                microdosing tousled waistcoat.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:w-1/3 sm:w-1/2 p-4 overflow-hidden">
+                    <div class="flex relative">
+                        <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center"
+                            src="img/port-5-1.jpg">
+                        <div
+                            class="px-8 py-36 relative z-10 w-full border-4 border-gray-800 bg-gray-900 opacity-0 hover:opacity-90 transition-all duration-500">
+                            <h2 class="tracking-widest text-sm   font-medium text-blue-400 mb-1">Design Branding
+                            </h2>
+                            <h1 class="  text-lg font-medium text-white mb-3">Neptune</h1>
+                            <p class="  text-white">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing
+                                microdosing tousled waistcoat.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:w-1/3 sm:w-1/2 p-4 overflow-hidden">
+                    <div class="flex relative">
+                        <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center"
+                            src="img/port-8.jpg">
+                        <div
+                            class="px-8 py-36 relative z-10 w-full border-4 border-gray-800 bg-gray-900 opacity-0 hover:opacity-90 transition-all duration-500">
+                            <h2 class="tracking-widest text-sm   font-medium text-blue-400 mb-1">Full Branding Crew
+                            </h2>
+                            <h1 class="  text-lg font-medium text-white mb-3">Holden Caulfield</h1>
+                            <p class="  text-white">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing
+                                microdosing tousled waistcoat.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:w-1/3 sm:w-1/2 p-4 overflow-hidden">
+                    <div class="flex relative">
+                        <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center"
+                            src="img/port-2.jpg">
+                        <div
+                            class="px-8 py-36 relative z-10 w-full border-4 border-gray-800 bg-gray-900 opacity-0 hover:opacity-90 transition-all duration-500">
+                            <h2 class="tracking-widest text-sm   font-medium text-blue-400 mb-1">Landing Animation
+                            </h2>
+                            <h1 class="  text-lg font-medium text-white mb-3">Alper Kamu</h1>
+                            <p class="  text-white">Photo booth fam kinfolk cold-pressed sriracha leggings jianbing
+                                microdosing tousled waistcoat.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--footer -->
+    <footer class="py-[100px] bg-[#f4f9fd]">
+        <div class="container mx-auto">
+            
+            <div class="flex md:items-center lg:items-start md:flex-row flex-wrap flex-col">
+                <div class="lg:w-2/12 md:w-6/12 w-12/12 px-4 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
+                    <img src="img/logo.png" alt="">
+                    <p class="mt-4 text-sm text-gray-500 font-bold ps-2">Ever since we started using we’ve , and more.
+                    </p>
+                </div>
+                <div class="lg:w-3/12 md:w-6/12 w-12/12 px-4 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
+                    <h2 class="font-bold text-black">Overview</h2>
+                    <nav class="list-none ps-2 py-4">
+                        <li class="py-2">
+                            <a
+                                class="text-gray-400 font-semibold text-sm hover:text-[#6c63ff] duration-500 hover:border-b-2 hover:border-[#6c63ff]">Terms</a>
+                        </li>
+                        <li class="py-2">
+                            <a
+                                class="text-gray-400 font-semibold text-sm hover:text-[#6c63ff] duration-500 hover:border-b-2 hover:border-[#6c63ff]">Privacy
+                                Policy</a>
+                        </li>
+                        <li class="py-2">
+                            <a
+                                class="text-gray-400 font-semibold text-sm hover:text-[#6c63ff] duration-500 hover:border-b-2 hover:border-[#6c63ff]">Cookies</a>
+                        </li>
+                        <li class="py-2">
+                            <a
+                                class="text-gray-400 font-semibold text-sm hover:text-[#6c63ff] duration-500 hover:border-b-2 hover:border-[#6c63ff]">Integrations</a>
+                        </li>
+                    </nav>
+                </div>
+                <div class="lg:w-3/12 md:w-6/12 w-12/12 px-4 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
+                    <h2 class="font-bold">Customer</h2>
+                    <nav class="list-none mb-10 ps-2 py-4">
+                        <li class="py-3">
+                            <a
+                                class="text-gray-400 font-semibold text-sm hover:text-[#6c63ff] duration-500 hover:border-b-2 hover:border-[#6c63ff]">Product</a>
+                        </li>
+                        <li class="py-3">
+                            <a
+                                class="text-gray-400 font-semibold text-sm hover:text-[#6c63ff] duration-500 hover:border-b-2 hover:border-[#6c63ff]">Pricing</a>
+                        </li>
+                        <li class="py-3">
+                            <a
+                                class="text-gray-400 font-semibold text-sm hover:text-[#6c63ff] duration-500 hover:border-b-2 hover:border-[#6c63ff]">Integrations</a>
+                        </li>
+
+                    </nav>
+                </div>
+                <div class="lg:w-2/12 md:w-6/12 w-12/12 px-4 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
+                    <h2 class="font-bold">Product</h2>
+                    <nav class="list-none mb-10 ps-2 py-2">
+                        <li class="py-3">
+                            <a
+                                class="text-gray-400 font-semibold text-sm hover:text-[#6c63ff] duration-500 hover:border-b-2 hover:border-[#6c63ff]">Getting
+                                Started</a>
+                        </li>
+                        <li class="py-3">
+                            <a
+                                class="text-gray-400 font-semibold text-sm hover:text-[#6c63ff] duration-500 hover:border-b-2 hover:border-[#6c63ff]">Style
+                                Guide</a>
+                        </li>
+                        <li class="py-3">
+                            <a
+                                class="text-gray-400 font-semibold text-sm hover:text-[#6c63ff] duration-500 hover:border-b-2 hover:border-[#6c63ff]">Licences</a>
+                        </li>
+                        <li class="py-3">
+                            <a
+                                class="text-gray-400 font-semibold text-sm hover:text-[#6c63ff] duration-500 hover:border-b-2 hover:border-[#6c63ff]">Changelog</a>
+                        </li>
+                    </nav>
+                </div>
+                <div class="lg:w-2/12 md:w-6/12 w-12/12 px-4 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
+                    <h2 class="font-bold">Follow Us</h2>
+                    <span class="mx-auto inline-flex sm:ml-auto sm:mt-0 mt-2  ">
+                        <a class="text-gray-400 duration-500 hover:text-white">
+                            <i
+                                class="fa-brands fa-facebook-f p-3 border-2 rounded-full hover:bg-[#6c63ff] hover:border-[#6c63ff]"></i>
+                        </a>
+                        <a class="ml-3 text-gray-400 duration-500 hover:text-white">
+                            <i
+                                class="fa-brands fa-twitter p-3 border-2 rounded-full hover:bg-[#6c63ff] hover:border-[#6c63ff]"></i>
+                        </a>
+                        <a class="ml-3 text-gray-400 duration-500 hover:text-white">
+                            <i
+                                class="fa-brands fa-pinterest-p p-3 border-2 rounded-full hover:bg-[#6c63ff] hover:border-[#6c63ff]"></i>
+                        </a>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="container mx-auto py-4  px-5 sm:flex-row text-center">
+            <div class="border-t-2 py-2"></div>
+            <a href="#" class="text-gray-400 text-sm">Copyright © 2023 Theme_Pure. All Rights Reserved
+            </a>
+        </div>
+    </footer>
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+<script>
+    const navLinks = document.querySelector('.nav-links')
+    function onToggleMenu(e) {
+        e.name = e.name === 'menu' ? 'close' : 'menu'
+        navLinks.classList.toggle('top-[120px]')
+    }
+</script>
+<script>
+    var swiper = new Swiper(".op", {
+        pagination: {
+            el: ".swiper-pagination",
+            dynamicBullets: true,
+        },
+    });
+</script>
+<script>
+    var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 1,
+        spaceBetween: 10,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        breakpoints: {
+            640: {
+                slidesPerView: 1,
+                spaceBetween: 20,
+            },
+            768: {
+                slidesPerView: 1,
+                spaceBetween: 40,
+            },
+            1024: {
+                slidesPerView: 2,
+                spaceBetween: 50,
+            },
+        },
+    });
+</script>
+<script>
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 500) {
+            $("header").addClass("fixed")
+        }
+        else {
+            $("header").removeClass("fixed")
+        }
+    })
+</script>
+</html>
